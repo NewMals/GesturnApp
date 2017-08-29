@@ -6,6 +6,15 @@
     </ion-navbar>
 </ion-header>
 
+<ion-fab bottom right>
+    <button ion-fab><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+        <button ion-fab><ion-icon name="paper"></ion-icon></button>
+        <button ion-fab (click)="cerrarSesion()"><ion-icon name="power"></ion-icon></button>
+    </ion-fab-list>
+</ion-fab>
+
+
 <ion-content>
     <ion-card>
         <ion-card-header>
@@ -23,19 +32,19 @@
         </ion-card-header>
         <ion-card-content>
             <ion-list>
-                    <ion-grid *ngFor="let ticket of arrayTicket">
-                        <ion-row style="text-align: center;">
-                            <ion-col>
-                                <p>{{ticket.codigo}}</p>
-                            </ion-col>
-                            <ion-col>
-                                <p>{{ticket.desArea}}</p>
-                            </ion-col>
-                            <ion-col>
-                                <p>{{ticket.Modulo}}</p>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
+                <ion-grid *ngFor="let ticket of arrayTicket">
+                    <ion-row style="text-align: center;">
+                        <ion-col>
+                            <p>{{ticket.codigo}}</p>
+                        </ion-col>
+                        <ion-col>
+                            <p>{{ticket.desArea}}</p>
+                        </ion-col>
+                        <ion-col>
+                            <p>{{ticket.Modulo}}</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
             </ion-list>
         </ion-card-content>
     </ion-card>

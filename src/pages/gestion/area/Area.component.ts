@@ -6,6 +6,7 @@ import { ToastController, NavController } from "ionic-angular";
 import { DTOticket } from "../../../DTO/ticket";
 import { DTOusuario } from "../../../DTO/usuario";
 import { TabsPage } from "../../tabs/tabs";
+import { DirecPage } from "../../pages";
 
 @Component({
     selector: 'page-area',
@@ -47,10 +48,12 @@ export class AreaPage {
                     if(response.status == 200){
                         this.storage.set('Area', JSON.stringify(area));
                         this.storage.set('Ticket', JSON.stringify(response.json()));
-                        this.navCtrl.push(TabsPage);
+                        this.navCtrl.push(DirecPage);
                 }else{
                         this.toastError('mensaje por cambiar en area.component generar ticket');
                 }
+            }, (err) =>{
+                this.toastError('No se encuentra disponible el servidor de Ticket');
             });
        }); 
        

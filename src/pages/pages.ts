@@ -9,12 +9,12 @@ import { salaEsperaPage } from "./gestion/salaEspera/salaEspera.component";
 import { TicketPage } from "./gestion/ticket/Ticket.component";
 
 // The page the user lands on after opening the app and without a session
-export const FirstRunPage = WelcomePage;
+export const FirstRunPage = salaEsperaPage;
 
 // The main page the user will see as they use the app over a long period of time.
 // Change this if not using tabs
 export const MainPage = AreaPage;
-export const DirecPage = TabsPage;
+export const DirecPage = salaEsperaPage;
 
 // The initial root pages for our tabs (remove if not using tabs)
 export const Tab1Root = salaEsperaPage;
