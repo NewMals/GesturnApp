@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Sala de espera
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-row style="text-align: center;">
+                <ion-col>
+                    Turno
+                </ion-col>
+                <ion-col>
+                    Area
+                </ion-col>
+                <ion-col>
+                    Modulo
+                </ion-col>
+            </ion-row>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                    <ion-grid *ngFor="let ticket of arrayTicket">
+                        <ion-row style="text-align: center;">
+                            <ion-col>
+                                <p>{{ticket.codigo}}</p>
+                            </ion-col>
+                            <ion-col>
+                                <p>{{ticket.desArea}}</p>
+                            </ion-col>
+                            <ion-col>
+                                <p>{{ticket.Modulo}}</p>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
